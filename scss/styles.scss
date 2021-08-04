@@ -1,9 +1,78 @@
-.rule {
-    color: red;
-    a {
-        color: blue;
-        span {
-            color: pink;
+@import "reset";
+@import "mixins";
+@import "variables";
+
+#main-nav {
+  background: $deepBlue;
+  ul {
+    width: 100%;
+    @include clearfix;
+    li {
+      float: left;
+      width: (100% / 6);
+      @include mediaQuery($md) {
+        width: 100%;
+      }
+      a {
+        color: $aColor;
+        text-decoration: none;
+        padding: 1rem;
+        display: block;
+        text-align: center;
+        &:hover {
+          background: lighten($deepBlue, 3);
         }
+      }
     }
+  }
+}
+
+section {
+  h1 {
+    font-size: $sectionHeading;
+    color: $deepBlue;
+  }
+}
+
+.lead-banner,
+.lessons-banner {
+  @include banner;
+  text-align: right;
+  li {
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    max-width: 32rem;
+    margin: 4rem 0;
+  }
+}
+
+#services {
+  li {
+    float: left;
+    box-sizing: border-box;
+    text-align: center;
+    width: (100% / 3);
+  }
+  img {
+    width: 60%;
+    margin: 1.25rem 20%;
+  }
+  a {
+    text-decoration: none;
+    color: $deepBlue;
+    font-weight: bold;
+    &:hover {
+      color: complement($deepBlue);
+    }
+  }
+  ul {
+    @include clearfix;
+  }
+}
+
+#projects li {
+  @include grid(4, 2%);
+  img {
+    width: 100%;
+  }
 }

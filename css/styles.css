@@ -1,9 +1,161 @@
-.rule {
-  color: red;
+body {
+  font-family: arial;
+  background: #f8f9fb;
 }
-.rule a {
-  color: blue;
+
+html,
+body,
+ul,
+ol,
+li,
+form,
+fieldset,
+legend {
+  margin: 0;
+  padding: 0;
 }
-.rule a span {
-  color: pink;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#main-nav {
+  background: #032f3e;
+}
+#main-nav ul {
+  width: 100%;
+}
+#main-nav ul:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#main-nav ul li {
+  float: left;
+  width: 16.6666666667%;
+}
+@media screen and (max-width: 600px) {
+  #main-nav ul li {
+    width: 100%;
+  }
+}
+#main-nav ul li a {
+  color: #f8f9fb;
+  text-decoration: none;
+  padding: 1rem;
+  display: block;
+  text-align: center;
+}
+#main-nav ul li a:hover {
+  background: #043a4d;
+}
+
+section h1 {
+  font-size: 1.5rem;
+  color: #032f3e;
+}
+
+.lead-banner,
+.lessons-banner {
+  position: relative;
+  width: 100%;
+  color: white;
+  text-align: right;
+}
+.lead-banner .banner-content,
+.lessons-banner .banner-content {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+}
+.lead-banner img,
+.lessons-banner img {
+  width: 100%;
+}
+.lead-banner span,
+.lessons-banner span {
+  font-size: 3rem;
+  display: block;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+@media screen and (max-width: 1440px) and (min-width: 768px) {
+  .lead-banner span,
+.lessons-banner span {
+    font-size: 1.5rem;
+  }
+}
+.lead-banner span.title,
+.lessons-banner span.title {
+  font-weight: normal;
+  margin-bottom: 1.75rem;
+}
+.lead-banner li,
+.lessons-banner li {
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  max-width: 32rem;
+  margin: 4rem 0;
+}
+
+#services li {
+  float: left;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  width: 33.3333333333%;
+}
+#services img {
+  width: 60%;
+  margin: 1.25rem 20%;
+}
+#services a {
+  text-decoration: none;
+  color: #032f3e;
+  font-weight: bold;
+}
+#services a:hover {
+  color: #3e1203;
+}
+#services ul:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#projects li {
+  float: left;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  width: 23.5%;
+}
+#projects li:nth-child(4n) {
+  margin-right: 0;
+}
+#projects li img {
+  width: 100%;
 }
